@@ -16,5 +16,8 @@
   "devDependencies": {
     "@sanity/cli": "^2.0.0",
     "lerna": "^3.14.0"
+  },
+  "dependencies": {
+    "svelte-markdown": "^0.1.12"
   }
 }

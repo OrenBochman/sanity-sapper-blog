@@ -1,7 +1,8 @@
 <script context="module">
+
   export async function preload({ params }) {
     try {
-      // As with the server route, we have acces to params.slug here
+      // As with the server route, we have access to params.slug here
       const res = await this.fetch(`api/blog/${params.slug}`);
       const { post } = await res.json();
       return { post };
@@ -14,6 +15,7 @@
 <script>
   import BlockContent from "@movingbrands/svelte-portable-text";
   import serializers from "../../components/serializers";
+  import SvelteMarkdown from 'svelte-markdown'
 
   export let post;
 </script>
@@ -50,4 +52,8 @@
 
 <div class="content">
   <BlockContent blocks={post.body} {serializers} />
+</div>
+
+<div class="content">
+  <SvelteMarkdown source={post.bodyMD} />
 </div>
