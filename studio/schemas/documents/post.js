@@ -63,9 +63,24 @@ export default {
       ]
     },
     {
+      name: 'isMarkDown',
+      type: 'boolean',
+      title: 'is a markdown post',
+      initialValue: false,
+    },
+    {
       name: 'body',
       type: 'bodyPortableText',
-      title: 'Body'
+      title: 'Body (Portable Text)',
+      hidden: ({document}) => document?.isMarkDown,
+
+    },
+    {
+      name: 'bodyMD',
+      type: 'markdown',
+      title: 'Body (MarkDown)',
+      hidden: ({document}) => !document?.isMarkDown,
+
     }
   ],
   orderings: [
@@ -98,6 +113,10 @@ export default {
       ]
     }
   ],
+  initialValue: () => ({
+  //  isMarkDown: false,
+  //  releaseDate: (new Date()).toISOString()
+  }),
   preview: {
     select: {
       title: 'title',
