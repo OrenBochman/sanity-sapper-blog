@@ -14,13 +14,22 @@
     "@sanity/default-login",
     "@sanity/dashboard",
     "@sanity/desk-tool",
+    "@sanity/code-input",
     "dashboard-widget-structure-menu",
     "dashboard-widget-document-list",
     "dashboard-widget-netlify",
-    "@sanity/code-input",
     "markdown",
-    "asset-source-unsplash"
+    "asset-source-unsplash",
+    "leaflet-input",
+    "@sanity/vision"
   ],
+  "env": {
+    "development": {
+      "plugins": [
+        "@sanity/vision"
+      ]
+    }
+  },
   "parts": [
     {
       "name": "part:@sanity/base/schema",
