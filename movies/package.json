@@ -2,7 +2,7 @@
 	"name": "kit",
 	"version": "0.0.1",
 	"scripts": {
-		"dev": "svelte-kit dev",
+		"dev": "svelte-kit dev --port 3005",
 		"build": "svelte-kit build",
 		"start": "svelte-kit start",
 		"lint": "prettier --check . && eslint --ignore-path .gitignore .",

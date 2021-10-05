@@ -5,11 +5,10 @@
     "maxZoom": 18,
     "url": "https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}",
     "attribution": "© <a href=\"https://www.mapbox.com/about/maps/\">Mapbox</a> © <a href=\"http://www.openstreetmap.org/copyright\">OpenStreetMap</a> <strong><a href=\"https://www.mapbox.com/map-feedback/\" target=\"_blank\">Improve this map</a></strong>"
-
   },
   "defaultLocation": {
-    "lat": 37.779048,
-    "lng": -122.415214
+    "lat": 38.0853,
+    "lng": 34.7818
   },
   "defaultZoom": 13,
   "maxZoom": 18
