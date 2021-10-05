@@ -1,11 +1,17 @@
 {
   "tileLayer": {
-    "attribution": "&copy; <a href=\"http://osm.org/copyright\">OpenStreetMap</a> contributors",
-    "url": "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+    "accessToken": "pk.eyJ1Ijoib3JlbmJvY2htYW4iLCJhIjoiY2t1ZHlocHFkMWY3NjJxbG1nZmJseDV6cCJ9.KasUtFdr4HddyHREIM2W2w",
+    "id": "mapbox.streets",
+    "maxZoom": 18,
+    "url": "https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}",
+    "attribution": "© <a href=\"https://www.mapbox.com/about/maps/\">Mapbox</a> © <a href=\"http://www.openstreetmap.org/copyright\">OpenStreetMap</a> <strong><a href=\"https://www.mapbox.com/map-feedback/\" target=\"_blank\">Improve this map</a></strong>"
+
   },
   "defaultLocation": {
     "lat": 37.779048,
     "lng": -122.415214
   },
-  "defaultZoom": 13
+  "defaultZoom": 13,
+  "maxZoom": 18
+
 }
