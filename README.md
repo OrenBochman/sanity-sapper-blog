@@ -1,4 +1,4 @@
-# Blog with Sapper
+# Blog with Sapper and SvelteKit
 
 _Fully customizable blog template with a Svelte.js front-end._
 

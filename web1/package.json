@@ -1,8 +1,8 @@
 {
-	"name": "kit",
+	"name": "sanity-kit-movies",
 	"version": "0.0.1",
 	"scripts": {
-		"dev": "svelte-kit dev --port 3005",
+		"dev": "svelte-kit dev --port 3002",
 		"build": "svelte-kit build",
 		"start": "svelte-kit start",
 		"lint": "prettier --check . && eslint --ignore-path .gitignore .",
