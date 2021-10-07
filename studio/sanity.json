@@ -22,7 +22,8 @@
     "asset-source-unsplash",
     "leaflet-input",
     "@sanity/vision",
-    "seo-tools"
+    "seo-tools",
+    "color-picker"
   ],
   "env": {
     "development": {
