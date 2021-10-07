@@ -21,7 +21,8 @@
     "markdown",
     "asset-source-unsplash",
     "leaflet-input",
-    "@sanity/vision"
+    "@sanity/vision",
+    "seo-tools"
   ],
   "env": {
     "development": {
