@@ -28,3 +28,5 @@ Netlify automatically deploys new changes committed to master on GitHub. If you 
 [![Slack Community Button](https://slack.sanity.io/badge.svg)](https://slack.sanity.io/)
 
 Join [Sanity’s developer community](https://slack.sanity.io) or ping us [on Twitter](https://twitter.com/sanity_io).
+
+note: svelte-kit npm export is broken. and missing from the `package.json`

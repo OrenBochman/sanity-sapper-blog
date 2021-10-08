@@ -5,17 +5,18 @@ export default {
   fields: [
     {
       name: 'title',
+      title: 'Title',
       type: 'string',
-      title: 'Title'
-    },    
+    },
     {
-      name: 'slug',
-      type: 'slug',
+      type: 'slug',name: 'slug',
       title: 'Slug',
-      options: {
-        // add a button to generate slug from the title field
-        source: 'title'
-      }
+      options: {  source: doc => `cat-${doc.title}`  },
+    },
+    {
+      type: 'reference',
+      to: [{type:'category'}],
+      name:'parent'
     },
     {
       name: 'description',

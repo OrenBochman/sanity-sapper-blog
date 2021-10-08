@@ -16,6 +16,7 @@ export default {
       type: 'slug',
       title: 'Slug',
       description: 'Some front ends will require a slug to be set to be able to show the post',
+      
       options: {
         source: 'title',
         maxLength: 96

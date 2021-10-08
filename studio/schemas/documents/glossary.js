@@ -1,8 +1,8 @@
 export default {
-     name: 'glossary',   title: 'glossary',     type: 'document', descriptions: 'short definitions to be used in popups etc',
+     name: 'glossary',   title: 'Glossary',     type: 'document', descriptions: 'short definitions to be used in popups etc',
   fields: [
     { name: 'title',      title: 'Title',       type: 'string',   description: 'term'    },
-    { name: 'slug',       title: 'Slug',        type: 'slug',     description: 'some front ends will require a slug',       options: {  source: 'title',   maxLength: 96       }     },
+    { name: 'slug',       title: 'Slug',        type: 'slug',     description: 'some front ends will require a slug',       options: {   source: doc => `gloss-${doc.title}`,   maxLength: 96       }     },
     { name: 'author',     title: 'Author',      type: 'array',    of: [{type: 'authorReference'}] },
     { name: 'category',   title: 'Categories',  type: 'array',    of: [{type: 'reference', to: { type: 'category'          }        }      ]    },
     { name: 'body',       title: 'Body ',       type: 'markdown',  }, 

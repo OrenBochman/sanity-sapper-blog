@@ -6,6 +6,7 @@
     "build": "lerna run build --parallel",
     "build-studio": "lerna bootstrap && (cd studio && npm run build)",
     "build-web": "lerna bootstrap && (cd web && npm run export)",
+    "build-web1": "lerna bootstrap && (cd web1 && npm run export)",
     "clean": "lerna run clean --parallel",
     "dev": "lerna run dev --parallel",
     "format": "lerna run format",
