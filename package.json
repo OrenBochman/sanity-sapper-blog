@@ -4,7 +4,7 @@
   "version": "1.0.26",
   "scripts": {
     "build": "lerna run build --parallel",
-    "build-studio": "lerna bootstrap && (cd studio && yarn run build)",
+    "build-studio": "lerna bootstrap && (cd studio && npm run build)",
     "build-web": "lerna bootstrap && (cd web && yarn run export)",
     "build-web1": "lerna bootstrap && (cd web1 && yarn run export)",
     "clean": "lerna run clean --parallel",
