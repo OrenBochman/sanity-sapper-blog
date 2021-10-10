@@ -23,7 +23,13 @@
     "leaflet-input",
     "@sanity/vision",
     "seo-tools",
-    "color-picker"
+    "color-picker",
+    "@sanity/color-input",
+    "latex-input",
+    "media"
+  ],
+  "exiled-plugins": [
+    "media-library"
   ],
   "env": {
     "development": {

@@ -1,3 +1,13 @@
+import React from 'react'
+
+const mathInlineIcon = () => (
+  <span>
+    <span style={{ fontWeight: 'bold' }}>∑</span>b
+  </span>
+)
+const mathIcon = () => <span style={{ fontWeight: 'bold' }}>∑</span>
+
+
 export default {
   name: 'bodyPortableText',
   type: 'array',
@@ -40,7 +50,10 @@ export default {
           }
         ]
       },
-      of: [{type: 'authorReference'}]
+      // inline types
+      of: [{type: 'authorReference'},
+           { type: 'latex', icon: mathInlineIcon, title: 'Inline math' },    
+          ]
     },
     // You can add additional types here. Note that you can't use
     // primitive types such as 'string' and 'number' in the same array
@@ -51,6 +64,9 @@ export default {
     },
     {
       type: 'code'
-    }
+    },
+    { type: 'latex', icon: mathIcon, title: 'Math block' },
+
+
   ]
 }
