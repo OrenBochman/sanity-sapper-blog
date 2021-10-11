@@ -17,7 +17,7 @@ export default {
       title: 'Slug',
       description: 'Some front ends will require a slug to be set to be able to show the post',
       options: {
-           source: doc => `gloss-${doc.title}`, 
+           source: doc => `post-${doc.title}`, 
            maxLength: 96       
       },
     },
