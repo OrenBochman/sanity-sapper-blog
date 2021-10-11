@@ -16,17 +16,23 @@ export default {
       type: 'slug',
       title: 'Slug',
       description: 'Some front ends will require a slug to be set to be able to show the post',
-      
       options: {
-        source: 'title',
-        maxLength: 96
-      }
+           source: doc => `gloss-${doc.title}`, 
+           maxLength: 96       
+      },
     },
     {
       name: 'publishedAt',
       type: 'datetime',
       title: 'Published at',
       description: 'This can be used to schedule post for publishing'
+    },
+    {
+      name: 'isDraft',
+      type: 'boolean',
+      title: 'draft',
+      initialValue: true,
+      description: 'should the document be published or not',
     },
     {
       name: 'mainImage',
@@ -143,24 +149,29 @@ export default {
       ]
     }
   ],
-  initialValue: () => ({
+  //initialValue: () => ({
   //  isMarkDown: false,
   //  releaseDate: (new Date()).toISOString()
-  }),
+  //}),
   preview: {
     select: {
       title: 'title',
       publishedAt: 'publishedAt',
+      isDraft: 'isDraft',
       slug: 'slug',
       media: 'mainImage'
     },
-    prepare ({title = 'No title', publishedAt, slug, media}) {
-      const dateSegment = format(publishedAt, 'YYYY/MM')
-      const path = `/${dateSegment}/${slug.current}/`
+    prepare ({title = 'No title', publishedAt, isDraft, slug, media}) {
+      const dateSegment = format(publishedAt, 'YYYY/MM') ;
+      const path = `/${dateSegment}/${slug.current}/`;     
+      const pubDate = publishedAt ? path : 'Missing publishing date';
+      const sub_title = isDraft ? 'draft' : pubDate;
+
       return {
         title,
         media,
-        subtitle: publishedAt ? path : 'Missing publishing date'
+        //subtitle: publishedAt ? path : 'Missing publishing date'
+        subtitle: sub_title,
       }
     }
   }
