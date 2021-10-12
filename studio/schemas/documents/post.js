@@ -1,9 +1,11 @@
 import {format} from 'date-fns'
+import {ImBlogger as icon} from 'react-icons/im' 
 
 export default {
   name: 'post',
   type: 'document',
   title: 'Blog Post',
+  icon,
   fields: [
     {
       name: 'title',

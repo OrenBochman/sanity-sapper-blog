@@ -9,7 +9,7 @@ export default {
       type: 'string',
     },
     {
-      type: 'slug',name: 'slug',
+      type: 'slug', name: 'slug',
       title: 'Slug',
       options: {  source: doc => `cat-${doc.title}`  },
     },

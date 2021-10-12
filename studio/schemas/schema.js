@@ -15,6 +15,7 @@ import castMember   from './documents/castMember'
 import movie        from './documents/movie'
 import person       from './documents/person'
 import screening    from './documents/screening'
+import pattern      from './ontology/pattern'
 
 // Object types
 import bodyPortableText from './objects/bodyPortableText'
@@ -45,6 +46,7 @@ export default createSchema({
     person,
     screening,
     glossary,
+    pattern,
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
     blockContent,
