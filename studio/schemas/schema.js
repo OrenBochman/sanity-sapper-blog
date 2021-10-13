@@ -16,6 +16,14 @@ import movie        from './documents/movie'
 import person       from './documents/person'
 import screening    from './documents/screening'
 import pattern      from './ontology/pattern'
+import umlClass     from './ontology/umlClass'
+import umlMethod    from './ontology/objects/umlMethod'
+import umlMember    from './ontology/objects/umlMember'
+import umlVariable  from './ontology/objects/umlVariable'
+import umlVisibility from './ontology/objects/umlVisibility'
+import umlActor from './ontology/objects/umlActor'
+
+
 
 // Object types
 import bodyPortableText from './objects/bodyPortableText'
@@ -47,6 +55,12 @@ export default createSchema({
     screening,
     glossary,
     pattern,
+    umlClass,
+    umlMethod,
+    umlMember,
+    umlVariable,
+    umlVisibility,
+    umlActor,
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
     blockContent,

@@ -29,7 +29,9 @@
     "media"
   ],
   "exiled-plugins": [
-    "media-library"
+    "media-library",
+    "mermaid"
+
   ],
   "env": {
     "development": {

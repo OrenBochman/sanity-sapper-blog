@@ -1,5 +1,6 @@
 {
-	"name": "sanity-kit-movies",
+	"private" : true,
+	"name": "kit",
 	"version": "0.0.1",
 	"scripts": {
 		"dev": "svelte-kit dev --port 3002",

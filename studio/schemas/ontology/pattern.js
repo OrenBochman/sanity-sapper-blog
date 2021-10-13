@@ -13,6 +13,40 @@ export default {
       name: 'name',                 title: 'Pattern Name and Classification',
       type: 'string',         description: 'A descriptive and unique name that helps in identifying and referring to the pattern'
     },
+        ///////////// METADATA & STATE
+    {
+      name: 'slug',      title: 'Slug',
+      type: 'slug',      description: 'Some front ends will require a slug to be set to be able to show the post',
+      options: {
+            source: doc => `pattern-${doc.name}`, 
+            maxLength: 96       
+      },
+    },
+    {
+      name: 'isDraft',
+      type: 'boolean',
+      title: 'draft',
+      initialValue: true,
+      description: 'should this document be published',
+    },
+    {
+        name: 'categories',
+        type: 'array',
+        title: 'Categories',
+        of: [
+          {
+            type: 'reference',
+            to: {
+              type: 'category'
+            }
+          }
+        ]
+      },
+      {
+        name: 'mainImage',
+        type: 'mainImage',
+        title: 'Main image'
+      },
     // Intent: A description of the goal behind the pattern and the reason for using it. 
     {
         name: 'intent',                 title: 'Intent',
@@ -76,28 +110,11 @@ export default {
         name: 'related',                 title: 'Related Patterns',
         type: 'markdown',                description: 'Other patterns that have some relationship with the pattern; discussion of the differences between the pattern and similar patterns.'
     },
+    {
+        name: 'credits',                 title: 'Credits',
+        type: 'markdown',                description: 'Sources for the  pattern'
+    },
 
-    ///////////// METADATA & STATE
-    {
-      name: 'slug',      title: 'Slug',
-      type: 'slug',      description: 'Some front ends will require a slug to be set to be able to show the post',
-      options: {
-           source: doc => `pattern-${doc.name}`, 
-           maxLength: 96       
-      },
-    },
-    {
-      name: 'isDraft',
-      type: 'boolean',
-      title: 'draft',
-      initialValue: true,
-      description: 'should this document be published',
-    },
-    {
-      name: 'mainImage',
-      type: 'mainImage',
-      title: 'Main image'
-    },
     {
       name: 'authors',
       title: 'Authors',
@@ -108,27 +125,15 @@ export default {
         }
       ]
     },
-    {
-      name: 'categories',
-      type: 'array',
-      title: 'Categories',
-      of: [
-        {
-          type: 'reference',
-          to: {
-            type: 'category'
-          }
-        }
-      ]
-    },
+   
   ],
   preview: {
     select: {
-      title: 'title',
-      slug: 'slug',
-      media: 'mainImage'
+      title: 'name',
+      isDraft: 'isDraft',
+      media: 'mainImage',     
     },
-    prepare ({title = 'No title',  isDraft, media}) {
+    prepare ({title = 'No title', isDraft, media}) {
       const sub_title = isDraft ? 'draft' : '';
       return {
         title,
