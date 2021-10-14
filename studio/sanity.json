@@ -9,7 +9,6 @@
   },
   "plugins": [
     "@sanity/base",
-    "@sanity/components",
     "@sanity/default-layout",
     "@sanity/default-login",
     "@sanity/dashboard",
@@ -27,11 +26,6 @@
     "@sanity/color-input",
     "latex-input",
     "media"
-  ],
-  "exiled-plugins": [
-    "media-library",
-    "mermaid"
-
   ],
   "env": {
     "development": {
