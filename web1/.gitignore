@@ -3,3 +3,15 @@ node_modules
 /.svelte
 /build
 /functions
+dist
+package-lock.json
+yarn.lock
+/examples/**/.svelte
+/examples/**/build
+/packages/create-svelte/template/CHANGELOG.md
+.env
+.vercel_build_output
+.svelte-kit
+.cloudflare
+.pnpm-debug.log
+.netlify

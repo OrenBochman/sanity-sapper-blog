@@ -8,3 +8,9 @@
 /lerna-debug.log
 .vscode/ltex.hiddenFalsePositives.en-US.txt
 web1/yarn-error.log
+
+# build files
+node_modules
+package-lock.json
+yarn.lock
+

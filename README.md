@@ -16,7 +16,9 @@ Deployed from [sanity.io/create](https://www.sanity.io/create?template=sanity-io
 2. `npm install` in the project root folder on local
 3. `npm run dev` to start the studio and frontend locally
    - Your studio should be running on [http://localhost:3333](http://localhost:3333)
-   - Your frontend should be running on [http://localhost:3000](http://localhost:3000)
+   - Your sapper frontend should be running on [http://localhost:3000](http://localhost:3000)
+   - Your svelte-kit frontend should be running on [http://localhost:3002](http://localhost:3002)
+
 4. `npm run build` to build to production locally
 
 ## Deploy changes
