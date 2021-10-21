@@ -5,9 +5,8 @@
   "scripts": {
     "build": "lerna run build --parallel",
     "build-studio": "lerna bootstrap && (cd studio && yarn run build)",
-    "build-web": "lerna bootstrap && (cd web && yarn run export)",
-    "dev-kit": "lerna bootstrap && (cd web1 && svelte-kit dev)",
-    "clean": "lerna run clean --parallel",
+    "build-web": "lerna bootstrap && (cd web && yarn run build)",
+    "dev-web": "lerna bootstrap && (cd web && yarn run dev)",
     "dev": "lerna run dev --parallel",
     "format": "lerna run format",
     "graphql-deploy": "lerna run graphql-deploy",
@@ -19,5 +18,5 @@
     "@sanity/cli": "^2.21.0",
     "lerna": "^4.0.0"
   },
-  "workspaces": [ "studio",  "web",  "web1" ]
+  "workspaces": [ "studio",  "web" ]
 }

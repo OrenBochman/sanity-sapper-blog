@@ -1,7 +1,51 @@
-<svelte:head>
-	<title>About</title>
-</svelte:head>
+<script context="module">
+	/* 
+    
+    BUG: fix the position of the headers
+    Responsivity - 
+    BUG: flow to one wide at minmal breakpoint
+    BUG: put locations on the right of people at some breakpointwidth 
+    BUG: make  Person flow left to right (three wide)
+    BUG: make  Location flow left to right (two wide)
 
-<h1>About this site</h1>
+    create task to push BUG items to an api...
+    **/
+	import '../styles/tailwind-output.css';
 
-<p>This is the 'about' page. There's not much here.</p>
+	import Person from '$lib/Person.svelte';
+	import Card from '$lib/Card.svelte';
+	import { browser, dev } from '$app/env';
+	export const hydrare = dev;
+	export const router = browser;
+	export const prerender = true;
+</script>
+
+<svelte:head><title>About</title></svelte:head>
+
+<section>
+	<h1>About SvelteKit</h1>
+	<p>This is the about page</p>
+
+	<!-- let's have a two column layout-->
+	<div>
+		<h2 class="section-header">who we are</h2>
+		<ul>
+			<li class="p-3"><Person /></li>
+			<li class="p-3"><Person /></li>
+			<li class="p-3"><Person /></li>
+		</ul>
+	</div>
+</section>
+<section>
+	<div>
+		<h2 class="section-header">our locations</h2>
+		<li class="p-3"><Card /></li>
+		<li class="p-3"><Card /></li>
+	</div>
+</section>
+
+<style>
+	.section-header {
+		@apply m-2 text-xl font-medium text-black;
+	}
+</style>

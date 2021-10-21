@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+  body {
+      font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+      font-weight: 300;
+    }
+
+    h1 {
+      @apply text-2xl;
+    }
+    h2 {
+      @apply text-xl;
+    }
+
+    h3 {
+       @apply text-lg;
+    }
+
+  }
+
+  @layer utilities {
+
+    html {
+        -webkit-tap-highlight-color: transparent;
+      }
+
+    .pb-safe {
+        padding-bottom: env(safe-area-inset-bottom);
+      }
+
+    .list-interpunct > li:before {
+      content: '・';
+      float: left;
+      margin: 0 0 0 -0.9em;
+      width: 0.9em;
+    }
+  
+    @media (min-width: 992px) {
+     .list-interpunct > li:before {
+        margin: 0 0 0 -1.5em;
+        width: 1.5em;
+      }
+    }
+  }

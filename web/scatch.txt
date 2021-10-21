@@ -1,0 +1,47 @@
+# TODO:
+
+- [x] :cat: :dog: :poop: :israel: support.
+- [ ] TOC
+- [ ] Katex $\pi$
+- [ ] Footnotes
+- [ ] citations 
+- [ ] uml and flowcharts (mermaid)
+- [ ] regex chart like regulex or railroad diagrams
+- [ ] fsm  [stately](stately.ai/viz) xstate
+
+`Here is a footnote reference,[^1] and another.[^longnote]
+
+[^1]: Here is the footnote.
+
+[^longnote]: Here's one with multiple blocks.
+
+    Subsequent paragraphs are indented to show that they
+belong to the previous footnote.``js
+let x = 10.0
+```
+
+Here is a footnote reference with [^1 added text].
+
+[^1]: Here is the footnote.
+
+markdown-it-table-of-contents
+markdown-it-footnote
+@gerhobbelt/markdown-it-checkbox
+@gerhobbelt/markdown-it-prism
+@jeff-tian/markdown-it-katex
+
+@gerhobbelt/markdown-it-front-matter
+@argdown/markdown-it-plugin
+@ispicyfish/markdown-it-mermaid
+markdown-it-music
+mermaid-it
+@traptitech/markdown-it-spoiler
+markdown-it-textual-uml
+markdown-it-citations
+markdown-it-bibliography
+markdown-it-sidenote
+markdown-it-tips
+markdown-it-smartarrows
+
+markdown-it-video
+markdown-it-kbd

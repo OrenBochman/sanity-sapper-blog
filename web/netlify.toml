@@ -1,4 +1,0 @@
-[build]
-  command = "yarn run build"
-  publish = "//sapper/__sapper__/export"
-
