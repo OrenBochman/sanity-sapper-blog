@@ -20,7 +20,7 @@
     "@sanity/core": "^2.21.5",
     "@sanity/dashboard": "^2.21.5",
     "@sanity/default-layout": "^2.21.5",
-    "@sanity/default-login": "^2.21.5",
+    "@sanity/default-login": "^2.21.4",
     "@sanity/desk-tool": "^2.21.5",
     "@sanity/google-maps-input": "^2.21.2",
     "@sanity/studio-hints": "^2.21.0",
