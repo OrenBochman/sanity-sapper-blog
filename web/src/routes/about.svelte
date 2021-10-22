@@ -14,6 +14,7 @@
 
 	import Person from '$lib/Person.svelte';
 	import Card from '$lib/Card.svelte';
+	import JoinPopup from '$lib/JoinPopup.svelte';
 	import { browser, dev } from '$app/env';
 	export const hydrare = dev;
 	export const router = browser;
@@ -25,7 +26,7 @@
 <section>
 	<h1>About SvelteKit</h1>
 	<p>This is the about page</p>
-
+	<JoinPopup></JoinPopup>
 	<!-- let's have a two column layout-->
 	<div>
 		<h2 class="section-header">who we are</h2>
@@ -36,6 +37,8 @@
 		</ul>
 	</div>
 </section>
+<JoinPopup th="th-blue"></JoinPopup>
+
 <section>
 	<div>
 		<h2 class="section-header">our locations</h2>
@@ -43,6 +46,9 @@
 		<li class="p-3"><Card /></li>
 	</div>
 </section>
+<JoinPopup ></JoinPopup>
+<JoinPopup th="th-blue"></JoinPopup>
+<JoinPopup th="th-red"></JoinPopup>
 
 <style>
 	.section-header {

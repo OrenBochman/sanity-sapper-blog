@@ -1,0 +1,80 @@
+Arguments: 
+  /usr/local/Cellar/node/16.2.0/bin/node /usr/local/Cellar/yarn/1.22.10/libexec/bin/yarn.js run build
+
+PATH: 
+  /Users/oren/.pyenv/versions/miniconda3-latest/condabin:/Library/Java/JavaVirtualMachines/graalvm-ce-java11-21.1.0/Contents/Home/Contents/Home/bin:/Library/Java/JavaVirtualMachines/graalvm-ce-java11-21.1.0/Contents/Home/Contents/Home/jre/languages/js/bin:/Library/Java/JavaVirtualMachines/graalvm-ce-java11-21.1.0/Contents/Home/bin:/usr/local/bin/python3:/usr/local/opt/ruby/bin:/Users/oren/.gem/ruby/3.0.0/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/opt/X11/bin:/Library/Apple/usr/bin:/usr/local/opt/node@16/bin:/Users/oren/bin:/Users/oren/Library/tools:/Users/oren/go/bin:/Volumes/S_8/Library/Android/sdk/emulator:/Volumes/S_8/Library/Android/sdk/tools:/Volumes/S_8/Library/Android/sdk/tools/bin:/Volumes/S_8/Library/Android/sdk/platform:/Volumes/S_8/Library/Android/sdk/platform-tools::/Applications/calibre.app/Contents/MacOS:/usr/local/opt/openssl@1.1/bin
+
+Yarn version: 
+  1.22.10
+
+Node version: 
+  16.2.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/oren/workspace/fs/sanity/sanity-sapper-blog/web/package.json: Unexpected string in JSON at position 1078
+      at JSON.parse (<anonymous>)
+      at /usr/local/Cellar/yarn/1.22.10/libexec/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/Cellar/yarn/1.22.10/libexec/lib/cli.js:310:30)
+      at /usr/local/Cellar/yarn/1.22.10/libexec/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "tw-sanity-kit",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+      "preview": "svelte-kit preview",
+      "check": "svelte-check --tsconfig ./tsconfig.json",
+      "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
+      "lint": "prettier --ignore-path .gitignore --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
+      "format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. .",
+      "dev:only": "svelte-kit dev",
+      "build:only": "svelte-kit build",
+      "tailwind:watch": "cross-env TAILWIND_MODE=watch cross-env NODE_ENV=development postcss src/styles/tailwind.css -o src/styles/tailwind-output.css -w",
+      "tailwind:build": "cross-env TAILWIND_MODE=build cross-env NODE_ENV=production postcss src/styles/tailwind.css -o src/styles/tailwind-output.css",
+      "dev": "concurrently \"yarn run dev:only\" \"yarn run tailwind:watch\"",
+      "build-node-env" : "NODE_OPTIONS = '--experimental-modules --experimental-specifier-resolution=node'",
+      "build": "run-s build-node-env tailwind:build build:only"
+  
+      "devDependencies": {
+      "@movingbrands/svelte-portable-text": "^0.0.11",
+      "@sanity/block-content-to-hyperscript": "^3.0.0",
+      "@sanity/client": "^2.21.3",
+      "@sanity/image-url": "^1.0.1",
+      "@sveltejs/adapter-netlify": "^1.0.0-next.34",
+      "@sveltejs/kit": "next",
+      "@typescript-eslint/eslint-plugin": "^4.31.1",
+      "@typescript-eslint/parser": "^4.31.1",
+      "autoprefixer": "^10.3.7",
+      "concurrently": "^6.3.0",
+      "cross-env": "^7.0.3",
+      "eslint": "^7.32.0",
+      "eslint-config-prettier": "^8.3.0",
+      "eslint-plugin-svelte3": "^3.2.1",
+      "markdown-it": "^12.2.0",
+      "markdown-it-emoji": "2.0.0",
+      "postcss": "^8.3.10",
+      "postcss-cli": "^9.0.1",
+      "prettier": "^2.4.1",
+      "prettier-plugin-svelte": "^2.4.0",
+      "sanitize-html": "^2.5.2",
+      "snarkdown": "^2.0.0",
+      "svelte": "^3.42.6",
+      "svelte-check": "^2.2.6",
+      "svelte-preprocess": "^4.9.4",
+      "tailwindcss": "^2.2.17",
+      "tslib": "^2.3.1",
+      "typescript": "^4.4.3"
+    },
+    "type": "module"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

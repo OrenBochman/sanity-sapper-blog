@@ -1,6 +1,6 @@
 <script context="module" lang="ts">
 	import { client } from '$lib/sanityClient'
-	import BlockContent from '$lib/portable-text'
+	//import BlockContent from '$lib/portable-text'
 	import snarkdown from 'snarkdown';
 
 	export async function load( { page } )  {

@@ -1,25 +1,42 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@layer base {
+  :root {
+    --md-primary: #ab47bc;        /*  purple;*/
+    --md-secondary: #ff7043;      /* deep orange*/
+    --md-surface:    #eeeeee;
+    --md-background: #ffffCC;
+  }
+  .th-red {
+    --md-primary: #742a2a; /* dark red */
+    --md-secondary: #e53e3e; /* medium red */
+  } 
+  .th-blue {
+    --md-primary: #2a4365; /* dark blue */
+    --md-secondary: #3182ce; /* medium blue */
+  }
+  
+  @layer base {
 
   body {
+      background: var(--md-surface);
       font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
       font-weight: 300;
     }
 
-    h1 {
-      @apply text-2xl;
-    }
-    h2 {
-      @apply text-xl;
-    }
+  section {
+    padding : 10px;
+  }
 
-    h3 {
-       @apply text-lg;
-    }
-
+  h1 {
+    @apply text-2xl;
+  }
+  h2 {
+    @apply text-xl;
+  }
+  h3 {
+      @apply text-lg;
+  }
   }
 
   @layer utilities {
@@ -45,4 +62,37 @@
         width: 1.5em;
       }
     }
+
+    /* custom utils 
+    @layer utilities {
+     
+      //   @variants responsive|hover,focus,dark 
+
+      .scroll-snap-none {
+        scroll-snap-type: none;
+      }
+      .scroll-snap-x {
+        scroll-snap-type: x;
+      }
+      .scroll-snap-y {
+        scroll-snap-type: y;
+      }
+    }
+    */
   }
+
+
+ /* https://material.io/resources/color/#!/?view.left=0&view.right=0&primary.color=AB47BC&secondary.color=FF7043&primary.text.color=B2DFDB&secondary.text.color=EEEEEE 
+     --md-primary-light: #df78ef;
+    --md-primary-dark: #790e8b;   
+    --md-secondary-light: #ffa270; 
+    --md-secondary-dark: #c63f17; 
+   
+    --md-error:      #B00020;
+    --md-text-on-primary:  #e0f2f1; 
+    --md-text-on-secondary:  #eeeeee; 
+    --md-text-on-background:  #000000; 
+    --md-text-on-surface:  #000000; 
+    --md-text-on-error:  #ffffff; 
+
+ */

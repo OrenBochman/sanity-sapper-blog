@@ -18,9 +18,6 @@
 			<li class:active={$page.path === '/blog'}>
 				<a href="/blog">Blog</a>
 			</li>
-			<li class:active={$page.path === '/movies'}>
-				<a href="/movies">Movies</a>
-			</li>
 		</ul>
 	</nav>
 	<!-- todo add darkmode toggle here -->
@@ -47,6 +44,7 @@
     */
 
 	.active {
-		border-bottom: 2px solid var(--color-accent);
+	@apply border-b-2 border-solid border-red-500; 	/*border-bottom: 2px solid var(--color-accent);*/
+	
 	}
 </style>
