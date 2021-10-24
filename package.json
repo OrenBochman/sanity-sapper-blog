@@ -18,5 +18,10 @@
     "@sanity/cli": "^2.21.0",
     "lerna": "^4.0.0"
   },
-  "workspaces": [ "studio",  "web" ]
+  "workspaces": {
+    "nohoist": [
+      "**/tailwindcss",
+      "**/@tailwindcss/**"
+    ]
+  }
 }
