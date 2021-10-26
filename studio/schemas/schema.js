@@ -5,35 +5,35 @@ import createSchema from 'part:@sanity/base/schema-creator'
 import schemaTypes from 'all:part:@sanity/base/schema-type'
 
 // document schemas
-import author       from './documents/author'
-import category     from './documents/category'
-import post         from './documents/post'
-import siteSettings from './documents/siteSettings'
-import glossary     from './documents/glossary'
-import crewMember   from './documents/crewMember'
-import castMember   from './documents/castMember'
-import movie        from './documents/movie'
-import person       from './documents/person'
-import screening    from './documents/screening'
-import pattern      from './ontology/pattern'
-import umlClass     from './ontology/umlClass'
-import umlMethod    from './ontology/objects/umlMethod'
-import umlMember    from './ontology/objects/umlMember'
-import umlVariable  from './ontology/objects/umlVariable'
-import umlVisibility from './ontology/objects/umlVisibility'
-import umlActor from './ontology/objects/umlActor'
-
-
+import author       from './documents/author';
+import category     from './documents/category';
+import post         from './documents/post';
+import siteSettings from './documents/siteSettings';
+import glossary     from './documents/glossary';
+import crewMember   from './documents/crewMember';
+import castMember   from './documents/castMember';
+import movie        from './documents/movie';
+import person       from './documents/person';
+import screening    from './documents/screening';
+import pattern      from './ontology/pattern';
+import umlClass     from './ontology/umlClass';
+import umlMethod    from './ontology/objects/umlMethod';
+import umlMember    from './ontology/objects/umlMember';
+import umlVariable  from './ontology/objects/umlVariable';
+import umlVisibility from './ontology/objects/umlVisibility';
+import umlActor from './ontology/objects/umlActor';
+import helpArticle from './documents/helpArticle';
+import faq from './objects/faq';
 
 // Object types
-import bodyPortableText from './objects/bodyPortableText'
-import bioPortableText from './objects/bioPortableText'
-import excerptPortableText from './objects/excerptPortableText'
-import mainImage from './objects/mainImage'
-import authorReference from './objects/authorReference'
-import blockContent from './objects/blockContent'
-import plotSummary from './objects/plotSummary'
-import plotSummaries from './objects/plotSummaries'
+import bodyPortableText from './objects/bodyPortableText';
+import bioPortableText from './objects/bioPortableText';
+import excerptPortableText from './objects/excerptPortableText';
+import mainImage from './objects/mainImage';
+import authorReference from './objects/authorReference';
+import blockContent from './objects/blockContent';
+import plotSummary from './objects/plotSummary';
+import plotSummaries from './objects/plotSummaries';
 
 
 // Then we give our schema to the builder and provide the result to Sanity
@@ -61,6 +61,8 @@ export default createSchema({
     umlVariable,
     umlVisibility,
     umlActor,
+    helpArticle,
+    faq,
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
     blockContent,
