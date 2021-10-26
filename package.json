@@ -14,7 +14,6 @@
     "lint-web": "cd web & yarn run lint",
     "lint-studio":"cd studio & yarn run lint",
     "lint": "run-p lint-studio lint-web",
-    "postinstall": "yarn bootstrap",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
