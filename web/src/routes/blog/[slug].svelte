@@ -25,6 +25,6 @@
 
 <h1>{post.title}</h1>
 
-<div class="content">
+<div class="content clean">
 	{@html snarkdown(post.bodyMD)}
 </div>

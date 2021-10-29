@@ -11,11 +11,11 @@
     create task to push BUG items to an api...
     **/
 	import '../styles/tailwind-output.css';
-
+	import { browser, dev } from '$app/env';
 	import Person from '$lib/Person.svelte';
 	import Card from '$lib/Card.svelte';
 	import JoinPopup from '$lib/JoinPopup.svelte';
-	import { browser, dev } from '$app/env';
+
 	export const hydrare = dev;
 	export const router = browser;
 	export const prerender = true;
@@ -30,7 +30,10 @@
 	<!-- let's have a two column layout-->
 	<div>
 		<h2 class="section-header">who we are</h2>
-		<ul>
+		<ul class="grid  grid-cols-1 gap-1 md:grid-cols-2  md:gap-2  lg:grid-cols-3 lg:gap-3 ">
+			<li class="p-3"><Person /></li>
+			<li class="p-3"><Person /></li>
+			<li class="p-3"><Person /></li>
 			<li class="p-3"><Person /></li>
 			<li class="p-3"><Person /></li>
 			<li class="p-3"><Person /></li>
@@ -42,8 +45,12 @@
 <section>
 	<div>
 		<h2 class="section-header">our locations</h2>
-		<li class="p-3"><Card /></li>
-		<li class="p-3"><Card /></li>
+		<ul class="grid  grid-cols-1 gap-2 xl:grid-cols-2  lg:gap-3 ">
+			<li class="p-3"><Card /></li>
+			<li class="p-3"><Card /></li>
+			<li class="p-3"><Card /></li>
+			<li class="p-3"><Card /></li>
+		</ul>
 	</div>
 </section>
 <JoinPopup ></JoinPopup>
@@ -51,7 +58,5 @@
 <JoinPopup th="th-red"></JoinPopup>
 
 <style>
-	.section-header {
-		@apply m-2 text-xl font-medium text-black;
-	}
+	.section-header { @apply m-2 text-xl font-medium text-black;}
 </style>
