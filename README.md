@@ -37,6 +37,6 @@ note: svelte-kit npm export is broken. and missing from the `package.json`
 1. added tailwindcss
 1. added tailwindcss plugins
 1. basic themes in tailwind
-1. added  markdown it! 
+1. added markdown it! 
 1. added markdown it pluginss
 1. moved markdown constants to their own file (data.js in \src\lib)
